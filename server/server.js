@@ -32,7 +32,12 @@ io.on('connection', (socket) => {
 app.set('io', io);
 
 // ─── Middleware ────────────────────────────────────────────
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ 
+  origin: [
+    'http://localhost:3000',
+    'https://resto-seven-drab.vercel.app/'
+  ] 
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
