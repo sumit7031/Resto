@@ -30,7 +30,7 @@ export default function CartPage() {
         quantity: item.quantity,
       }));
 
-      await axios.post('http://resto-server-5tw2.onrender.com/api/orders', {
+      await axios.post('https://resto-server-5tw2.onrender.com/api/orders', {
         customerName,
         tableNumber: tableNumber || 'Takeaway',
         items,

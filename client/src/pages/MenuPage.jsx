@@ -11,7 +11,7 @@ export default function MenuPage() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('http://resto-server-5tw2.onrender.com/api/dishes')
+    axios.get('https://resto-server-5tw2.onrender.com/api/dishes')
       .then(res => { setDishes(res.data); setLoading(false); })
       .catch(() => setLoading(false));
   }, []);

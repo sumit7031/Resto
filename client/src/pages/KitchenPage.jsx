@@ -3,7 +3,7 @@ import axios from 'axios';
 import { io } from 'socket.io-client';
 import toast from 'react-hot-toast';
 
-const SOCKET_URL = 'http://resto-server-5tw2.onrender.com';
+const SOCKET_URL = 'https://resto-server-5tw2.onrender.com';
 const KITCHEN_PIN = '1234'; // 🔐 Change this to your PIN
 
 const STATUS_COLORS = {
@@ -40,7 +40,7 @@ export default function KitchenPage() {
   useEffect(() => {
     if (!authenticated) return;
 
-    axios.get('http://resto-server-5tw2.onrender.com/api/orders')
+    axios.get('https://resto-server-5tw2.onrender.com/api/orders')
       .then(res => setOrders(res.data));
 
     const socket = io(SOCKET_URL);
@@ -61,7 +61,7 @@ export default function KitchenPage() {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.patch(`http://resto-server-5tw2.onrender.com/api/orders/${id}`, { status });
+      await axios.patch(`https://resto-server-5tw2.onrender.com/api/orders/${id}`, { status });
       toast.success(`Status: ${status} / ${STATUS_HINDI[status]}`);
     } catch {
       toast.error('Update failed');

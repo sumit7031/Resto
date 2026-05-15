@@ -35,7 +35,7 @@ app.set('io', io);
 app.use(cors({ 
   origin: [
     'http://localhost:3000',
-    'https://resto-seven-drab.vercel.app/'
+    'https://resto-seven-drab.vercel.app'
   ] 
 }));
 app.use(express.json());
