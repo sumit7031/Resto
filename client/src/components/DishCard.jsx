@@ -16,7 +16,7 @@ export default function DishCard({ dish }) {
       <div style={styles.imageWrapper}>
         {dish.image
           ? <img
-              src={`http://resto-server-5tw2.onrender.com/uploads/${dish.image}`}
+              src={dish.image}
               alt={dish.name}
               style={styles.image}
             />

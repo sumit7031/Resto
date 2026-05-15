@@ -8,7 +8,7 @@ export default function CartItem({ item }) {
     <div style={styles.card}>
       {item.image
         ? <img
-            src={`http://resto-server-5tw2.onrender.com/uploads/${item.image}`}
+            src={item.image}
             alt={item.name}
             style={styles.image}
           />
